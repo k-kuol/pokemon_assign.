@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokédex Grid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- The header looks like the red lid of a Pokédex -->
+  <header class="lid">
+    <div class="lights" aria-hidden="true">
+      <span class="lens"></span>
+      <span class="led red"></span>
+      <span class="led yellow"></span>
+      <span class="led green"></span>
+    </div>
+    <h1>Pokédex</h1>
+  </header>
+
+  <main>
+    <div class="controls">
+      <label for="search" class="visually-hidden">Search Pokémon by name</label>
+      <input id="search" type="search" placeholder="Search by name…" autocomplete="off">
+
+      <nav class="pager" aria-label="Pages">
+        <button id="prev" type="button">Previous</button>
+        <span id="page-info">Page 1</span>
+        <button id="next" type="button">Next</button>
+      </nav>
+    </div>
+
+    <p id="status" class="status" role="status">Loading Pokémon…</p>
+
+    <!-- Cards are added here by script.js -->
+    <section id="grid" class="grid"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
